@@ -6,12 +6,14 @@
     <title>Jose Torres Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f280f3538d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/Jose_transparent-.png" class="logo">
+                <img src="images/Jose_transparent-.png" class="logo" alt="Jose Torres Logo">
                 <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -44,7 +46,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I'm studying Computer Science and minoring in Business at Indiana University. I'm passionate about building modern, responsive apps and websites, and I enjoy solving real-world problems through technology. Outside of tech, I'm a Vice Basileus for my Faternity, a Rugby player, a Student Leader, and a Creative Editor.</p>
+                    <p>I'm studying Computer Science and minoring in Business at Indiana University. I'm passionate about building modern, responsive apps and websites, and I enjoy solving real-world problems through technology. Outside of tech, I'm a Vice Basileus for my Fraternity, a Rugby player, a Student Leader, and a Creative Editor.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -98,8 +100,8 @@
                     <i class="fa-solid fa-video"></i>
                     <h2>Video & Photo Editing</h2>
                     <p>Content creation, YouTube editing, and promotional media for social media presence.</p>
-                    <a href"#contact">Learn more</a>
-                </div>
+                    <a href="#contact">Learn more</a>
+                    </div>
             </div>
         </div>
     </div>
@@ -107,7 +109,7 @@
     <!-- Courses Section -->
 <div id="courses">
     <div class="container">
-        <h1 class="sub-title">Courses</h1>
+        <h1 class="sub-title">Courses/h1>
         <div class="course-list">
             <div class="course">
                 <i class="fa-solid fa-mobile-screen-button"></i>
@@ -187,7 +189,7 @@
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname) {
+        function opentab(tabname, event) {
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
