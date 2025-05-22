@@ -13,6 +13,7 @@
   body {
     background: #121212;
     color: #ffffff;
+    overflow-x: hidden;
   }
   
   .container {
@@ -45,6 +46,11 @@
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    cursor: pointer;
+  }
+
+  nav ul li a:active{
+    color: #ffffff;
   }
   
   nav ul li a::after {
@@ -229,6 +235,10 @@
     background: #fff;
     color: #121212;
   }
+
+  .services-list div:hover a{
+    color: #121212;
+  }
   
   /* Courses Section */
 #courses {
@@ -368,6 +378,27 @@
     display: none;
   }
   @media only screen and (max-width: 600px){
+    .services-list div h2,
+    .tab-links,
+    .tab-contents ul li span {
+      font-size: 18px;
+    }
+
+    .sub-title {
+      font-size: 32px;
+    }
+
+    .course h3 {
+      font-size: 18px;
+    }
+
+    .course p {
+      font-size: 14px;
+    }
+    
+    .header-content {
+      flex-direction: column;
+    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -419,9 +450,17 @@
       .contact-left,.contact-right{
         flex-basis: 100%;
       }
+      .btn, .btn2, form .btn2 {
+        cursor: pointer;
+      }
+      section {
+        overflow: auto;
+      }
   }
   #msg{
     color: #61b752;
     margin-top: -20px;
     display: block;
   }
+  
+ 
