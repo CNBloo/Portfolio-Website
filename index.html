@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Torres Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f280f3538d.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jose Torres III's personal portfolio. A Computer Science student at Indiana University showcasing tech projects, skills, and experiences." />
+  <meta name="keywords" content="Jose Torres, portfolio, computer science, web developer, IU, projects, resume" />
+  <meta name="author" content="Jose Torres III" />
+  <title>Jose Torres Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/f280f3538d.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/Jose_transparent-.png" class="logo" alt="Jose Torres Logo">
-                <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times"onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars"onclick="openmenu()"></i>
-            </nav>
-            <div class="header-content">
-                <div class="header-text">
-                  <p>Computer Science Student</p>
-                  <h1>Hi, I'm <span>Jose Torres III </span><br>From Hobart Indiana</h1>
-                </div>
-                <div class="header-img">
-                  <img src="images/IMG_3899-removebg-preview.png" alt="Jose Torres Headshot">
-                </div>
-              </div>
-              
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/Jose_transparent-.png" class="logo" alt="Jose Torres Logo" />
+        <ul id="sidemenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-content">
+        <div class="header-text">
+          <p>Computer Science Student</p>
+          <h1>Hi, I'm <span>Jose Torres III</span><br />From Hobart Indiana</h1>
         </div>
+        <div class="header-img">
+          <img src="images/IMG_3899-removebg-preview.png" alt="Jose Torres Headshot" />
+        </div>
+      </div>
     </div>
+  </div>
 
     <!-- About Section -->
     <div id="about">
@@ -79,37 +80,45 @@
         </div>
     </div>
 
-    <!-- Services Section -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web & App Development</h2>
-                    <p>Clean, responsive, and interactive websites or mobile apps using modern tech stacks.</p>
-                    <a href="#contact">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-terminal"></i>
-                    <h2>Tech Support & Automation</h2>
-                    <p>From coding assignments to Excel automation and scripting with Python.</p>
-                    <a href="#contact">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-video"></i>
-                    <h2>Video & Photo Editing</h2>
-                    <p>Content creation, YouTube editing, and promotional media for social media presence.</p>
-                    <a href="#contact">Learn more</a>
-                    </div>
-            </div>
+  <!-- Projects Section -->
+  <div id="projects">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>React Sorting Visualizer</h2>
+          <p>An interactive and animated web application built in React to visualize popular sorting algorithms in real time.</p>
+          <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React Badge" />
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000" alt="JavaScript Badge" />
+          <a href="https://github.com/CNBloo/react-sorting-visualizer" target="_blank">View on GitHub</a>
         </div>
+        <div>
+          <i class="fa-solid fa-users-line"></i>
+          <h2>SHPE Chapter Website</h2>
+          <p>A modern, responsive website for the Society of Hispanic Professional Engineers (SHPE) chapter at IU.</p>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge" />
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3 Badge" />
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000" alt="JavaScript Badge" />
+          <a href="https://github.com/CNBloo/SHPE-Website" target="_blank">View on GitHub</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2>Portfolio Website</h2>
+          <p>This personal portfolio site, featuring your resume, experience, and projects, was hand-coded for responsive design and ease of navigation.</p>
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge" />
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3 Badge" />
+          <a href="https://github.com/CNBloo/Portfolio-Website" target="_blank">View on GitHub</a>
+        </div>
+      </div>
     </div>
+  </div>
+  
 
     <!-- Courses Section -->
 <div id="courses">
     <div class="container">
-        <h1 class="sub-title">Courses/h1>
+        <h1 class="sub-title">Courses</h1>
         <div class="course-list">
             <div class="course">
                 <i class="fa-solid fa-mobile-screen-button"></i>
@@ -188,46 +197,42 @@
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
+    
         function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+          for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+          for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
         }
-    </script>
-    <script>
+      </script>
+      <script>
         var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
+        function openmenu() {
+          sidemenu.style.right = "0";
         }
-
-        function closemenu(){
-            sidemenu.style.right = "-200px";
+        function closemenu() {
+          sidemenu.style.right = "-200px";
         }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyxjsegvoT367zI-zmcaVmnp_t-7o9OZk9PXbtn5l8A9yBJTk6Adl-bTIhkLO7NHd8oVw/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
+      </script>
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyxjsegvoT367zI-zmcaVmnp_t-7o9OZk9PXbtn5l8A9yBJTk6Adl-bTIhkLO7NHd8oVw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+    
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
-                msg.innerHTML = "Message Sent!"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
+              msg.innerHTML = "Message Sent!";
+              setTimeout(() => msg.innerHTML = "", 5000);
+              form.reset();
             })
-            .catch(error => console.error('Error!', error.message))
-        })
+            .catch(error => console.error('Error!', error.message));
+        });
       </script>
 </body>
 </html>
