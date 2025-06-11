@@ -34,16 +34,7 @@ I serve as **Treasurer for SHPE IU**, and as **Vice Basileus & Keeper of Finance
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=CNBloo&theme=dark&hide_border=true" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CNBloo&layout=compact&theme=dark&hide_border=true" />
-</p>
-
-
-
+## Code Updates
 
 
     Tried to make it better for mobile users (Still in Progress)
