@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jose Torres III's personal portfolio. A Computer Science student at Indiana University showcasing tech projects, skills, and experiences." />
+  <meta name="description" content="Jose Torres III — CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
   <meta name="keywords" content="Jose Torres, portfolio, computer science, web developer, IU, projects, resume" />
   <meta name="author" content="Jose Torres III" />
-  <title>Jose Torres III - Portfolio</title>
+  <title>Jose Torres III — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f280f3538d.js" crossorigin="anonymous"></script>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div id="header">
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar">
     <div class="container">
       <nav aria-label="Main Navigation">
         <img src="images/Jose_transparent-.png" class="logo" alt="Jose Torres Logo" />
         <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#courses">Courses</a></li>
@@ -26,127 +31,152 @@
         </ul>
         <i class="fas fa-bars" onclick="openmenu()"></i>
       </nav>
-      <div class="header-content">
-        <div class="header-text">
-          <p>Computer Science Student</p>
-          <h1>Hi, I'm <span>Jose Torres III</span><br />From Hobart, Indiana</h1>
-          <p style="margin-top: 20px; font-size: 18px; color: #ababab;">Aspiring Software Engineer specializing in full-stack development and web technologies. Currently pursuing CS at Indiana University with a focus on building impactful digital solutions.</p>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Open to Internships &middot; Summer 2026
+          </div>
+          <p class="hero-label">Computer Science @ Indiana University</p>
+          <h1>Hi, I'm <span class="gradient-name">Jose Torres III</span></h1>
+          <p class="hero-typed-line">I build <span id="typed-text"></span><span class="cursor">|</span></p>
+          <p class="hero-desc">Full-stack developer with real-world experience teaching 100+ students, shipping production websites, and leading technical teams. I write code that solves problems and ships on time.</p>
           <div class="cta-buttons">
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="#contact" class="btn">Let's Connect</a>
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
           </div>
         </div>
-        <div class="header-img">
-          <img src="images/IMG_3899-removebg-preview.png" alt="Jose Torres Headshot" />
+        <div class="hero-img">
+          <div class="hero-img-wrapper">
+            <img src="images/IMG_3899-removebg-preview.png" alt="Jose Torres" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
   <main id="main-content" role="main">
-    <!-- About Section -->
-    <div id="about">
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
             <img src="images/IMG_4322.jpeg" class="about-img" alt="Jose Torres Profile">
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>I'm a Computer Science student at Indiana University with a minor in Business, passionate about building modern, responsive web applications that solve real-world problems. I've taught 100+ students weekly as an Undergraduate Instructor and currently serve as a Web Services Coordinator for Indiana University, managing content and technical implementations.</p>
-            <p>Beyond academics, I serve as Vice Basileus of Omega Psi Phi Fraternity and Treasurer for SHPE, where I manage a $7,000 budget and lead the development of our chapter website. I also play on IU's Men's Rugby Team, bringing the same dedication to athletics as I do to coding and learning.</p>
-          
+            <h2 class="sub-title">About Me</h2>
+            <p>I'm a Computer Science student at Indiana University pursuing a BS with a Software Engineering cognate and a minor in Business. I've taught 100+ students as an Undergraduate Instructor, manage web projects as a Web Services Coordinator at IU, and have designed and launched multiple real-world websites from the ground up.</p>
+            <p>Off-screen, I'm Vice Basileus of Omega Psi Phi Fraternity, Treasurer and Project Lead Developer for SHPE — where I manage a $7,000 budget — and a player on IU's Men's Rugby Team.</p>
+
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Technical Skills</p>
-              <p class="tab-links " onclick="opentab('experience')">Experience</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
               <p class="tab-links" onclick="opentab('education')">Education</p>
               <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
             </div>
-            
+
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Languages</span><br>Java, Python, SQL, JavaScript, HTML/CSS, Swift, C/C++</li>
-                <li><span>Frameworks & Technologies</span><br>Git/GitHub, SpringBoot, Docker, React</li>
-                <li><span>Tools & Platforms</span><br>VS Code, Microsoft 365, Adobe Suite, Excel</li>
+                <li><span>Languages</span>Java, Python, SQL, JavaScript, HTML/CSS, Swift, C/C++</li>
+                <li><span>Frameworks & Tools</span>React, SpringBoot, Docker, Git/GitHub</li>
+                <li><span>Platforms</span>VS Code, Adobe Suite, Microsoft 365, Excel</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>Dec 2025 - Present</span><br><strong>Web Services Coordinator</strong> – Indiana University<br>Coordinate with departments to publish accurate online content, troubleshoot website issues, and support web projects to improve user experience</li>
-                <li><span>Aug 2025 - Nov 2025</span><br><strong>Undergraduate Instructor</strong> – Indiana University<br>Taught 100+ undergraduate students weekly, led review sessions on HTML, CSS, and Python fundamentals</li>
-                <li><span>Jul 2024 - Aug 2024</span><br><strong>Digital Marketing Intern</strong> – Remote<br>Analyzed campaign datasets using Python to identify engagement trends, automated performance tracking improving reporting efficiency</li>
+                <li><span>Dec 2025 – Present &middot; Web Services Coordinator</span><strong>Indiana University</strong><br>Coordinate with departments to publish accurate content, troubleshoot site issues, and support web projects to improve user experience.</li>
+                <li><span>Aug 2025 – Nov 2025 &middot; Undergraduate Instructor</span><strong>Indiana University</strong><br>Taught 100+ undergraduate students weekly; led review sessions on HTML, CSS, and Python fundamentals.</li>
+                <li><span>Jul 2024 – Aug 2024 &middot; Digital Marketing Intern</span><strong>Remote</strong><br>Analyzed campaign datasets using Python, automated performance tracking to improve reporting efficiency.</li>
               </ul>
             </div>
-            
+
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>Aug 2023 - May 2027</span><br><strong>Indiana University Bloomington</strong><br>BS in Computer Science (Cognate: Software Engineering), Minor in Business<br><em>Relevant Coursework:</em> Data Structures & Algorithms, Software Engineering, Mobile App Development, System Programming (C/Unix), Object-Oriented Methods</li>
-                <li><span>Aug 2019 - June 2023</span><br><strong>Hobart High School</strong><br>Graduate with Associate Degree<br><em>Relevant Leadership: </em>Men's Volleyball and Mens Diving Captin</li>
+                <li><span>Aug 2023 – May 2027</span><strong>Indiana University Bloomington</strong><br>BS in Computer Science &middot; Software Engineering Cognate &middot; Minor in Business<br><em>Courses: Data Structures & Algorithms, Software Engineering, Mobile App Dev, System Programming (C/Unix), OOP</em></li>
+                <li><span>Aug 2019 – Jun 2023</span><strong>Hobart High School</strong><br>Graduate with Associate Degree &middot; Men's Volleyball Captain &middot; Men's Diving Captain</li>
               </ul>
             </div>
-            
+
             <div class="tab-contents" id="leadership">
               <ul>
-                <li><span>Vice Basileus & Keeper of Finance</span><br><strong>Omega Psi Phi Fraternity, Inc.</strong> (April 2025 - Present)<br>Lead chapter operations by coordinating executive board meetings and facilitating member communication, oversee planning and execution of service initiatives</li>
-                <li><span>Treasurer & Project Lead Developer</span><br><strong>Society of Hispanic Professional Engineers</strong> (Aug 2024 - Present)<br>Manage $7,000 budget ensuring financial stability, led design and development of chapter website to enhance visibility and member engagement</li>
-                <li><span>Player</span><br><strong>IU Men's Rugby Team</strong><br>Active team member competing at collegiate level</li>
+                <li><span>Apr 2025 – Present &middot; Vice Basileus & Keeper of Finance</span><strong>Omega Psi Phi Fraternity, Inc.</strong><br>Lead chapter operations, coordinate executive board meetings, and oversee service initiatives.</li>
+                <li><span>Aug 2024 – Present &middot; Treasurer & Project Lead Developer</span><strong>Society of Hispanic Professional Engineers (SHPE)</strong><br>Manage $7,000 budget; lead design and development of the chapter website.</li>
+                <li><span>Ongoing &middot; Player</span><strong>IU Men's Rugby Team</strong><br>Competing at the collegiate level.</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Projects Section -->
-    <div id="projects">
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-alt reveal">
       <div class="container">
-        <h1 class="sub-title">Featured Projects</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-users-line"></i>
-            <h2>SHPE Chapter Website</h2>
-            <p>Designed and deployed a modern, responsive website for the Society of Hispanic Professional Engineers chapter at IU. Led project as developer, coordinating feature implementation and content updates with team members.</p>
-            <div class="project-metrics">
-              <strong>Impact:</strong> Serves 100+ chapter members, increased engagement by 40%
+        <h2 class="sub-title">Featured Projects</h2>
+        <p class="section-subtitle">Things I've built and shipped.</p>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-users-line"></i>
+              <div class="project-links">
+                <a href="https://github.com/CNBloo/SHPE-Website" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                <a href="https://cnbloo.github.io/SHPE-Website/" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
             </div>
-            <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge" />
-            <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3 Badge" />
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000" alt="JavaScript Badge" />
-            <br><br>
-            <a href="https://github.com/CNBloo/SHPE-Website" target="_blank">📂 View Code</a>
-            <a href="https://cnbloo.github.io/SHPE-Website/" target="_blank">🌐 Live Demo</a>
-          </div>
-          
-          <div>
-            <i class="fa-solid fa-laptop-code"></i>
-            <h2>Portfolio Website</h2>
-            <p>Developed a responsive personal portfolio website showcasing projects, experience, and technical skills. Hand-coded for optimal performance with smooth navigation and mobile-first design principles.</p>
-            <div class="project-metrics">
-              <strong>Features:</strong> Dynamic content tabs, contact form integration, GitHub Pages deployment
+            <h3>SHPE Chapter Website</h3>
+            <p>Designed and deployed a responsive website for the Society of Hispanic Professional Engineers chapter at IU. Led the project as developer, coordinating features and content with team members.</p>
+            <div class="project-impact">Serves 100+ members &middot; 40% increase in chapter engagement</div>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
             </div>
-            <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5 Badge" />
-            <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3 Badge" />
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000" alt="JavaScript Badge" />
-            <br><br>
-            <a href="https://github.com/CNBloo/Portfolio-Website" target="_blank">📂 View Code</a>
           </div>
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div class="project-links">
+                <a href="https://github.com/CNBloo/Portfolio-Website" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>Hand-coded personal portfolio with smooth navigation, dynamic content tabs, contact form integration via Google Sheets, and mobile-first responsive design. Deployed on GitHub Pages.</p>
+            <div class="project-impact">Mobile-first &middot; GitHub Pages &middot; Google Sheets integration</div>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-    
-    <!-- Courses Section -->
-    <div id="courses">
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="reveal">
       <div class="container">
-        <h1 class="sub-title">Relevant Coursework</h1>
+        <h2 class="sub-title">Relevant Coursework</h2>
+        <p class="section-subtitle">Core CS curriculum at Indiana University.</p>
         <div class="course-list">
           <div class="course">
             <i class="fa-solid fa-code-branch"></i>
-            <h3>Data Structures and Algorithms</h3>
+            <h3>Data Structures & Algorithms</h3>
             <p>CSCI-C 343</p>
           </div>
           <div class="course">
             <i class="fa-solid fa-puzzle-piece"></i>
-            <h3>Software Engineering For Information Systems I</h3>
+            <h3>Software Engineering</h3>
             <p>CSCI-P 465</p>
           </div>
           <div class="course">
@@ -156,104 +186,75 @@
           </div>
           <div class="course">
             <i class="fa-solid fa-gears"></i>
-            <h3>Object-Oriented Software Methods</h3>
+            <h3>Object-Oriented Methods</h3>
             <p>CSCI-C 322</p>
           </div>
           <div class="course">
             <i class="fa-solid fa-terminal"></i>
-            <h3>System Programming with C and Unix</h3>
+            <h3>System Programming (C/Unix)</h3>
             <p>CSCI-C 291</p>
           </div>
           <div class="course">
             <i class="fa-solid fa-laptop-code"></i>
-            <h3>Introduction to Software Systems</h3>
+            <h3>Software Systems</h3>
             <p>CSCI-C 212</p>
           </div>
           <div class="course">
             <i class="fa-solid fa-diagram-project"></i>
-            <h3>Discrete Structures for Computer Science</h3>
+            <h3>Discrete Structures</h3>
             <p>CSCI-C 241</p>
           </div>
           <div class="course">
             <i class="fa-solid fa-desktop"></i>
-            <h3>Introduction to Computer Science</h3>
+            <h3>Intro to Computer Science</h3>
             <p>CSCI-C 211</p>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Contact Section -->
-    <div id="contact">
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-alt reveal">
       <div class="container">
         <div class="row">
           <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fas fa-paper-plane"></i> Torres25883@gmail.com</p>
-            <p><i class="fas fa-paper-plane"></i> jostorr@iu.edu</p>
-            <p><i class="fas fa-phone-square-alt"></i> 219-314-3816</p>
-            <p><i class="fas fa-map-marker-alt"></i> Hobart, Indiana</p>
+            <h2 class="sub-title">Get In Touch</h2>
+            <p class="contact-intro">I'm currently open to internship opportunities for Summer 2026. Whether you have a question, a project idea, or just want to connect — my inbox is open.</p>
+            <p><i class="fas fa-envelope"></i> Torres25883@gmail.com</p>
+            <p><i class="fas fa-envelope"></i> jostorr@iu.edu</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/jose-torres-iii/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://github.com/CNBloo" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://www.instagram.com/josetorre.s_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/bob.jonea.1654/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
-            <a href="images/Jose_Torrres_III_Resume_Latex.pdf" download class="btn btn2">Download Resume</a>
+            <a href="images/Jose_Torres_III_Resume.pdf" download class="btn btn-primary resume-btn">Download Resume</a>
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required>
               <input type="email" name="Email" placeholder="Your Email" required>
               <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-              <button type="submit" class="btn btn2">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
             <span id="msg"></span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
   </main>
-  
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-      for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
-  <script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-      sidemenu.style.right = "0";
-    }
-    function closemenu() {
-      sidemenu.style.right = "-200px";
-    }
-  </script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyxjsegvoT367zI-zmcaVmnp_t-7o9OZk9PXbtn5l8A9yBJTk6Adl-bTIhkLO7NHd8oVw/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <p>Designed &amp; built by <span>Jose Torres III</span> &middot; 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/CNBloo" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jose-torres-iii/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          msg.innerHTML = "Message sent successfully!";
-          setTimeout(() => msg.innerHTML = "", 5000);
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
