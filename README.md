@@ -1,45 +1,44 @@
-# 💻 Jose Torres III – Software Engineer & Student Leader
+# Jose Torres III — Personal Portfolio
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=Welcome%20to%20My%20Portfolio!&fontSize=30" />
-</p>
+A hand-coded personal portfolio website built with HTML, CSS, and vanilla JavaScript. No frameworks — every feature written from scratch.
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/jose-torres-iii/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge" />
-  </a>
-  <a href="mailto:torres25883@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
+**Live site:** https://cnbloo.github.io/Portfolio-Website/
 
 ---
 
-## 👋 About Me
+## Features
 
-I'm Jose Torres III — a Computer Science (Major) and Business (minor) at Indiana University. I'm passionate about solving real-world problems through tech.
+- Sticky navigation with mobile hamburger menu
+- Typing animation cycling through role descriptions
+- Tabbed About section (Skills, Experience, Education, Leadership)
+- Projects grid with tech tags and live links
+- Scroll-reveal animations via Intersection Observer
+- Contact form integrated with Google Sheets (no backend required)
+- Fully responsive — mobile-first design
 
-I serve as **Treasurer for SHPE IU**, and as **Vice Basileus & Keeper of Finance for Omega Psi Phi Fraternity, Inc.**, work at **Student Central at Indiana University**, and recently interned at **Abercrombie & Fitch**. As a student leader and developer, I love collaborating with teams to build functional and impactful tools.
+## Tech Stack
 
----
+- HTML5
+- CSS3 (custom properties, Flexbox, responsive layout)
+- Vanilla JavaScript
+- Google Fonts (Inter)
+- Font Awesome icons
+- Google Apps Script (contact form backend)
 
-## 🛠️ Tech Stack
+## Running Locally
 
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" />
-</p>
+No build step required — open `index.html` directly in a browser or use a local server:
 
----
+```bash
+npx serve .
+```
 
-## Code Updates
+## Project Structure
 
-
-    Tried to make it better for mobile users (Still in Progress)
-
-    Switched Services section to Projects and added css and html to support 
-
-    Rearranged by about me section, added Clubs and Orgs section with supporting details
-    
+```
+Personal-portfolio/
+├── index.html     # All page content and structure
+├── style.css      # All styling
+├── app.js         # All interactivity
+└── images/        # Profile photos, logo, resume PDF
+```
