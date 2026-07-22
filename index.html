@@ -7,6 +7,21 @@
   <meta name="keywords" content="Jose Torres, portfolio, computer science, web developer, IU, projects, resume" />
   <meta name="author" content="Jose Torres III" />
   <title>Jose Torres III — Portfolio</title>
+
+  <!-- Open Graph / Facebook, LinkedIn, Discord, Slack link previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cnbloo.github.io/Portfolio-Website/" />
+  <meta property="og:site_name" content="Jose Torres III — Portfolio" />
+  <meta property="og:title" content="Jose Torres III — Portfolio" />
+  <meta property="og:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
+  <meta property="og:image" content="https://cnbloo.github.io/Portfolio-Website/images/IMG_4322.jpeg" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jose Torres III — Portfolio" />
+  <meta name="twitter:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
+  <meta name="twitter:image" content="https://cnbloo.github.io/Portfolio-Website/images/IMG_4322.jpeg" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +56,7 @@
         <div class="hero-text">
           <div class="status-badge">
             <span class="status-dot"></span>
-            Open to Internships &middot; Summer 2027
+            Open to Internship &amp; New Grad Roles
           </div>
           <p class="hero-label">Computer Science @ Indiana University</p>
           <h1>Hi, I'm <span class="gradient-name">Jose Torres III</span></h1>
@@ -176,7 +191,7 @@
               <div class="project-links"></div>
             </div>
             <h3>Bella's Rentals — Business Platform</h3>
-            <p>Full-stack rental-management platform built for a real family-owned party rental business. Customers browse inventory and request quotes; the owner reviews, approves, and manages deliveries from a phone-first dashboard with automatic double-booking detection.</p>
+            <p>Full-stack rental-booking platform originally built for a real family-owned local business — customers browse inventory and request quotes; the owner reviews, approves, and manages deliveries from a phone-first dashboard with automatic double-booking detection. Now being generalized into a reusable platform for local service businesses.</p>
             <div class="project-impact">Built for a real business &middot; 60+ automated tests &middot; CI pipeline</div>
             <div class="tech-tags">
               <span class="tech-tag">Next.js</span>
@@ -242,6 +257,43 @@
             </div>
           </div>
 
+          <div class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-server"></i>
+              <div class="project-links">
+                <a href="https://github.com/CNBloo/homelab-journey" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Homelab — Self-Hosted Infrastructure</h3>
+            <p>Building a self-hosted homelab from scratch on repurposed hardware — virtualization with Proxmox, media serving via Jellyfin, and hands-on Linux administration. Documenting the full build (hardware, networking, lessons learned) in a public log.</p>
+            <div class="project-impact">In Progress &middot; Started Jul 2026 &middot; Public build log</div>
+            <div class="tech-tags">
+              <span class="tech-tag">Proxmox</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Jellyfin</span>
+              <span class="tech-tag">Self-Hosting</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <div class="project-links">
+                <a href="https://github.com/CNBloo/resume-tailor-agent" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>AI Resume Tailoring Agent</h3>
+            <p>AI agent that scores a resume against a job posting, then reconstructs it in LaTeX and auto-compiles it to a downloadable PDF via Gemini's structured output, with Zod-validated output to keep it free of invented experience.</p>
+            <div class="project-impact">Jul 2026 &middot; Gemini API &middot; Zod-validated output</div>
+            <div class="tech-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">LaTeX</span>
+              <span class="tech-tag">Zod</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -302,7 +354,7 @@
         <div class="row">
           <div class="contact-left">
             <h2 class="sub-title">Get In Touch</h2>
-            <p class="contact-intro">I'm currently open to internship opportunities for Summer 2027. Whether you have a question, a project idea, or just want to connect — my inbox is open.</p>
+            <p class="contact-intro">I'm currently open to internship and new grad opportunities. Whether you have a question, a project idea, or just want to connect — my inbox is open.</p>
             <p><i class="fas fa-envelope"></i> Torres25883@gmail.com</p>
             <p><i class="fas fa-envelope"></i> jostorr@iu.edu</p>
             <div class="social-icons">
