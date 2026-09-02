@@ -49,14 +49,16 @@ typeEffect();
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname) {
+function opentab(event, tabname) {
   for (var tablink of tablinks) {
     tablink.classList.remove("active-link");
+    tablink.setAttribute("aria-selected", "false");
   }
   for (var tabcontent of tabcontents) {
     tabcontent.classList.remove("active-tab");
   }
   event.currentTarget.classList.add("active-link");
+  event.currentTarget.setAttribute("aria-selected", "true");
   document.getElementById(tabname).classList.add("active-tab");
 }
 
@@ -64,18 +66,30 @@ function opentab(tabname) {
    MOBILE MENU
    ========================================= */
 var sidemenu = document.getElementById("sidemenu");
+var menuOpenBtn = document.querySelector(".menu-open-btn");
 
 function openmenu() {
   sidemenu.style.right = "0";
+  if (menuOpenBtn) menuOpenBtn.setAttribute("aria-expanded", "true");
 }
 
 function closemenu() {
   sidemenu.style.right = "-260px";
+  if (menuOpenBtn) menuOpenBtn.setAttribute("aria-expanded", "false");
 }
 
 // Auto-close menu when a nav link is clicked
 document.querySelectorAll('#sidemenu li a').forEach(function(link) {
   link.addEventListener('click', closemenu);
+});
+
+// Escape closes the mobile menu and hands focus back to the toggle, so
+// keyboard users aren't stranded in a closed menu.
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape" && sidemenu.style.right === "0px") {
+    closemenu();
+    if (menuOpenBtn) menuOpenBtn.focus();
+  }
 });
 
 /* =========================================
@@ -103,17 +117,32 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyxjsegvoT367zI-zmcaV
 const form = document.forms['submit-to-google-sheet'];
 const msg = document.getElementById("msg");
 
+function showMessage(text, isError) {
+  msg.textContent = text;
+  msg.style.color = isError ? "#f85149" : "var(--color-success)";
+  setTimeout(function() { msg.textContent = ""; }, 5000);
+}
+
 if (form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+
+    // Honeypot: real users never see or fill this field (see index.html).
+    // Silently no-op instead of telling a bot exactly which check caught it.
+    if (form.elements['company'] && form.elements['company'].value) {
+      form.reset();
+      return;
+    }
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(function(response) {
-        msg.innerHTML = "Message sent successfully!";
-        setTimeout(function() { msg.innerHTML = ""; }, 5000);
+        if (!response.ok) throw new Error('Request failed with status ' + response.status);
+        showMessage("Message sent successfully!", false);
         form.reset();
       })
       .catch(function(error) {
         console.error('Error!', error.message);
+        showMessage("Something went wrong sending your message. Please try again or email me directly.", true);
       });
   });
 }

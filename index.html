@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jose Torres III — CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
+  <meta name="description" content="Jose Torres III — CS student at Indiana University building full-stack web apps, mobile experiences, and self-hosted systems." />
   <meta name="keywords" content="Jose Torres, portfolio, computer science, web developer, IU, projects, resume" />
   <meta name="author" content="Jose Torres III" />
   <title>Jose Torres III — Portfolio</title>
@@ -13,19 +13,19 @@
   <meta property="og:url" content="https://cnbloo.github.io/Portfolio-Website/" />
   <meta property="og:site_name" content="Jose Torres III — Portfolio" />
   <meta property="og:title" content="Jose Torres III — Portfolio" />
-  <meta property="og:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
+  <meta property="og:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and self-hosted systems." />
   <meta property="og:image" content="https://cnbloo.github.io/Portfolio-Website/images/IMG_4322.jpeg" />
 
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Jose Torres III — Portfolio" />
-  <meta name="twitter:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and impactful digital solutions." />
+  <meta name="twitter:description" content="CS student at Indiana University building full-stack web apps, mobile experiences, and self-hosted systems." />
   <meta name="twitter:image" content="https://cnbloo.github.io/Portfolio-Website/images/IMG_4322.jpeg" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f280f3538d.js" crossorigin="anonymous"></script>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
@@ -35,16 +35,20 @@
   <header id="navbar">
     <div class="container">
       <nav aria-label="Main Navigation">
-        <img src="images/Jose_transparent-.png" class="logo" alt="Jose Torres Logo" />
+        <a href="#hero" class="logo" aria-label="Jose Torres III — Home">jose<span class="logo-accent">@iu:~$</span></a>
         <ul id="sidemenu">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#contact">Contact</a></li>
-          <i class="fas fa-times" onclick="closemenu()"></i>
+          <button type="button" class="menu-toggle menu-close-btn" aria-label="Close menu" onclick="closemenu()">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
         </ul>
-        <i class="fas fa-bars" onclick="openmenu()"></i>
+        <button type="button" class="menu-toggle menu-open-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidemenu" onclick="openmenu()">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
       </nav>
     </div>
   </header>
@@ -54,22 +58,21 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            Open to Internship &amp; New Grad Roles
-          </div>
-          <p class="hero-label">Computer Science @ Indiana University</p>
-          <h1>Hi, I'm <span class="gradient-name">Jose Torres III</span></h1>
-          <p class="hero-typed-line">I build <span id="typed-text"></span><span class="cursor">|</span></p>
-          <p class="hero-desc">CS student and web developer with hands-on experience deploying production websites at Indiana University, mentoring 100+ students, and building systems from the ground up — software and hardware alike.</p>
-          <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Let's Connect</a>
-          </div>
-        </div>
-        <div class="hero-img">
-          <div class="hero-img-wrapper">
-            <img src="images/IMG_3899-removebg-preview.png" alt="Jose Torres" />
+          <div class="term-panel">
+            <div class="term-head">jose@iu &mdash; hero.status</div>
+            <div class="term-rows">
+              <div><span class="term-k">OS</span><span class="term-v">B.S. Computer Science</span></div>
+              <div><span class="term-k">Host</span><span class="term-v">Indiana University Bloomington</span></div>
+              <div><span class="term-k">Status</span><span class="term-v">Open to internship &amp; new grad roles</span></div>
+              <div><span class="term-k">Shell</span><span class="term-v">I like to build <span id="typed-text"></span><span class="cursor">|</span></span></div>
+            </div>
+            <hr class="term-rule">
+            <h1>Jose Torres III</h1>
+            <p class="hero-desc">CS student and web developer with hands-on experience deploying production websites at Indiana University, mentoring 100+ students, and building systems from the ground up, software and hardware alike.</p>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Let's Connect</a>
+            </div>
           </div>
         </div>
       </div>
@@ -82,31 +85,28 @@
     <section id="about" class="reveal">
       <div class="container">
         <div class="row">
-          <div class="about-col-1">
-            <img src="images/IMG_4322.jpeg" class="about-img" alt="Jose Torres Profile">
-          </div>
           <div class="about-col-2">
             <h2 class="sub-title">About Me</h2>
             <p>I'm a Computer Science student at Indiana University pursuing a BS in Computer Science (Software Engineering) with a minor in Business. I deploy and maintain production web content at IU as a Web Services Coordinator, previously mentored 100+ students as an Undergraduate Instructor, and have built websites and hardware systems from scratch.</p>
-            <p>Outside of tech, I serve as Vice Basileus of Omega Psi Phi Fraternity and Treasurer & Project Lead Developer for SHPE — where I manage a $7,000 budget and lead our chapter's web presence. I also compete on IU's Men's Rugby Team.</p>
+            <p>Outside of tech, I serve as Vice Basileus of Omega Psi Phi Fraternity. I previously served as Treasurer & Project Lead Developer for SHPE, where I managed a $7,000 budget and led our chapter's web presence, and competed on IU's Men's Rugby Team.</p>
 
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links" onclick="opentab('experience')">Experience</p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
+            <div class="tab-titles" role="tablist" aria-label="About Jose">
+              <button type="button" class="tab-links active-link" role="tab" aria-selected="true" aria-controls="skills" id="tab-skills" onclick="opentab(event, 'skills')">Skills</button>
+              <button type="button" class="tab-links" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience" onclick="opentab(event, 'experience')">Experience</button>
+              <button type="button" class="tab-links" role="tab" aria-selected="false" aria-controls="education" id="tab-education" onclick="opentab(event, 'education')">Education</button>
+              <button type="button" class="tab-links" role="tab" aria-selected="false" aria-controls="leadership" id="tab-leadership" onclick="opentab(event, 'leadership')">Leadership</button>
             </div>
 
-            <div class="tab-contents active-tab" id="skills">
+            <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
               <ul>
-                <li><span>Languages</span>Python, TypeScript, JavaScript, SQL, HTML, CSS</li>
+                <li><span>Languages</span>Java, Python, JavaScript, SQL, HTML, CSS, C</li>
                 <li><span>Frameworks</span>React, Next.js, FastAPI, SQLAlchemy, Tailwind CSS</li>
-                <li><span>Tools</span>Git, GitHub, VS Code, Xcode, Excel, Microsoft 365, Adobe Suite</li>
-                <li><span>Systems & IT</span>Windows 11, PC Hardware Assembly, BIOS/UEFI, NVMe Storage, Troubleshooting, Proxmox/Virtualization, Linux Administration, Networking, Self-Hosting</li>
+                <li><span>Tools</span>Git, GitHub, Vercel, Tableau, Figma, VS Code, Xcode, Excel, Microsoft 365, Adobe Suite</li>
+                <li><span>Systems & IT</span>Windows 11, PC Hardware Assembly, BIOS/UEFI, NVMe Storage, Troubleshooting, Proxmox/Virtualization, Docker, Linux Administration, Networking, Self-Hosting</li>
               </ul>
             </div>
 
-            <div class="tab-contents" id="experience">
+            <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
               <ul>
                 <li>
                   <span>Dec 2025 – Present &middot; Web Services Coordinator</span>
@@ -118,7 +118,7 @@
                   </ul>
                 </li>
                 <li>
-                  <span>Aug 2025 – Nov 2025 &middot; Undergraduate Instructor</span>
+                  <span>Aug 2025 – Dec 2025 &middot; Undergraduate Instructor</span>
                   <strong>Indiana University &mdash; Bloomington, IN</strong>
                   <ul class="role-bullets">
                     <li>Mentored 100+ students in HTML, CSS, and Python fundamentals</li>
@@ -138,21 +138,21 @@
               </ul>
             </div>
 
-            <div class="tab-contents" id="education">
+            <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education">
               <ul>
-                <li><span>Aug 2023 – May 2027</span><strong>Indiana University Bloomington</strong><br>BS in Computer Science &middot; Software Engineering Cognate &middot; Minor in Business<br><em>Courses: Data Structures & Algorithms, Software Engineering, Mobile App Dev, System Programming (C/Unix), OOP</em></li>
+                <li><span>Aug 2023 – May 2027</span><strong>Indiana University Bloomington</strong><br>BS in Computer Science &middot; Minors: Business, Marketing, Data Science<br><em>Courses: Data Structures & Algorithms, Software Engineering, Mobile App Dev, System Programming (C/Unix), OOP</em></li>
                 <li><span>Aug 2019 – Jun 2023</span><strong>Hobart High School</strong><br>Graduate with Associate Degree &middot; Men's Volleyball Captain &middot; Men's Diving Captain</li>
               </ul>
             </div>
 
-            <div class="tab-contents" id="leadership">
+            <div class="tab-contents" id="leadership" role="tabpanel" aria-labelledby="tab-leadership">
               <ul>
                 <li>
-                  <span>Aug 2024 – Present &middot; Treasurer &amp; Project Lead Developer</span>
+                  <span>Aug 2024 – May 2026 &middot; Treasurer &amp; Project Lead Developer</span>
                   <strong>Society of Hispanic Professional Engineers &mdash; Bloomington, IN</strong>
                   <ul class="role-bullets">
-                    <li>Manage $7,000 organizational budget and ensure financial accountability</li>
-                    <li>Lead development and maintenance of chapter website and digital initiatives</li>
+                    <li>Managed $7,000 organizational budget and ensured financial accountability</li>
+                    <li>Led development and maintenance of chapter website and digital initiatives</li>
                   </ul>
                 </li>
                 <li>
@@ -191,7 +191,7 @@
               <div class="project-links"></div>
             </div>
             <h3>Local Business Website Template</h3>
-            <p>Full-stack website template for local service businesses to relaunch their online presence — customers browse offerings and request quotes; the owner reviews, approves, and manages jobs from a phone-first dashboard with automatic double-booking detection. Originally built for a real family-owned rental business, now being generalized into a reusable platform other local businesses can adopt.</p>
+            <p>Full-stack website template for local service businesses to relaunch their online presence. Customers browse offerings and request quotes; the owner reviews, approves, and manages jobs from a phone-first dashboard with automatic double-booking detection. Originally built for a real family-owned rental business, now being generalized into a reusable platform other local businesses can adopt.</p>
             <div class="project-impact">Built for a real business &middot; 60+ automated tests &middot; CI pipeline</div>
             <div class="tech-tags">
               <span class="tech-tag">Next.js</span>
@@ -248,32 +248,14 @@
               </div>
             </div>
             <h3>Homelab — Self-Hosted Infrastructure</h3>
-            <p>Building a self-hosted homelab from scratch on repurposed hardware — virtualization with Proxmox, media serving via Jellyfin, and hands-on Linux administration. Documenting the full build (hardware, networking, lessons learned) in a public log.</p>
+            <p>Self-hosted Proxmox VE server running isolated LXC containers for Jellyfin media streaming, a Minecraft server, Immich photo management, and AdGuard Home network-wide ad-blocking. Building a custom web app to monitor, manage, and secure the environment, with Tailscale-based remote access across networks.</p>
             <div class="project-impact">In Progress &middot; Started Jul 2026 &middot; Public build log</div>
             <div class="tech-tags">
               <span class="tech-tag">Proxmox</span>
+              <span class="tech-tag">Docker</span>
               <span class="tech-tag">Linux</span>
-              <span class="tech-tag">Jellyfin</span>
+              <span class="tech-tag">Tailscale</span>
               <span class="tech-tag">Self-Hosting</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card-header">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <div class="project-links">
-                <a href="https://github.com/CNBloo/resume-tailor-agent" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <h3>AI Resume Tailoring Agent</h3>
-            <p>AI agent that scores a resume against a job posting, then reconstructs it in LaTeX and auto-compiles it to a downloadable PDF via Gemini's structured output, with Zod-validated output to keep it free of invented experience.</p>
-            <div class="project-impact">Jul 2026 &middot; Gemini API &middot; Zod-validated output</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Gemini API</span>
-              <span class="tech-tag">LaTeX</span>
-              <span class="tech-tag">Zod</span>
             </div>
           </div>
 
@@ -337,8 +319,8 @@
         <div class="row">
           <div class="contact-left">
             <h2 class="sub-title">Get In Touch</h2>
-            <p class="contact-intro">I'm currently open to internship and new grad opportunities. Whether you have a question, a project idea, or just want to connect — my inbox is open.</p>
-            <p><i class="fas fa-envelope"></i> Torres25883@gmail.com</p>
+            <p class="contact-intro">I'm currently open to internship and new grad opportunities. Whether you have a question, a project idea, or just want to connect, my inbox is open.</p>
+            <p><i class="fas fa-envelope"></i> torres25883@gmail.com</p>
             <p><i class="fas fa-envelope"></i> jostorr@iu.edu</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/jose-torres-iii/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -349,6 +331,12 @@
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
+              <!-- Honeypot: invisible to sighted and screen-reader users, but a
+                   plain form field bots tend to fill in automatically. -->
+              <div class="visually-hidden" aria-hidden="true">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+              </div>
               <input type="text" name="Name" placeholder="Your Name" required>
               <input type="email" name="Email" placeholder="Your Email" required>
               <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
