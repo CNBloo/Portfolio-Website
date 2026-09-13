@@ -1,49 +1,4 @@
 /* =========================================
-   TYPING ANIMATION
-   ========================================= */
-const roles = [
-  "full-stack web apps.",
-  "clean, scalable code.",
-  "mobile experiences.",
-  "things that matter."
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-const typedEl = document.getElementById("typed-text");
-
-function typeEffect() {
-  if (!typedEl) return;
-
-  const current = roles[roleIndex];
-
-  if (isDeleting) {
-    typedEl.textContent = current.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    typedEl.textContent = current.substring(0, charIndex + 1);
-    charIndex++;
-  }
-
-  let speed = isDeleting ? 45 : 80;
-
-  if (!isDeleting && charIndex === current.length) {
-    speed = 2200;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
-    speed = 350;
-  }
-
-  setTimeout(typeEffect, speed);
-}
-
-typeEffect();
-
-/* =========================================
    TAB FUNCTIONALITY
    ========================================= */
 var tablinks = document.getElementsByClassName("tab-links");
